@@ -1,0 +1,52 @@
+{
+    "widgets": [
+        {
+            "id": "test123",
+            "title": "test123",
+            "settings": {
+                "viewUrl": "index.html",
+                "example_setting": "some value"
+            }
+        },
+        {
+            "id": "settingsExample",
+            "title": "Customize",
+            "settings": {
+                "viewUrl": "index.html",
+                "perspectiveDomain": "Live Dashboard Configuration"
+            }
+        },
+        {
+            "id": "settingsExample1",
+            "title": "Introduction",
+            "settings": {
+                "viewUrl": "/doc/introduction.html",
+                "perspectiveDomain": "Live Dashboard Configuration"
+            }
+        },
+        {
+            "id": "settingsExample2",
+            "title": "Development",
+            "settings": {
+                "viewUrl": "/doc/development.html",
+                "perspectiveDomain": "Live Dashboard Configuration"
+            }
+        },
+        {
+            "id": "settingsExample4",
+            "title": "Quick Start Guide",
+            "settings": {
+                "viewUrl": "/doc/quick_start.html",
+                "perspectiveDomain": "Live Dashboard Configuration"
+            }
+        },
+        {
+            "id": "settingsExample5",
+            "title": "Guide to Scenes",
+            "settings": {
+                "viewUrl": "/doc/guide_scenes.html",
+                "perspectiveDomain": "Live Dashboard Configuration"
+            }
+        }
+    ]
+}

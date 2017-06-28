@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>GENERATED</title>
+    <link href="https://builder.yaas.io/public/css/styles.css?v=1.16.3-243" media="screen, projection" rel="stylesheet" type="text/css">
+
+    <script src="https://builder.yaas.io/public/js/vendor/jquery/dist/jquery.min.js?v=1.16.3-243"></script>
+    <script src="https://builder.yaas.io/public/js/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div id="demo-page-background">
+    <div class="navbar navbar-default y-navbar-centered y-navbar-lg">
+        <div class="container-fluid">
+            <div class="navbar-left">
+                <div class="y-toolbar">
+                    <div class="y-toolbar-cell">
+                        <button class="btn-subordinate btn navbar-btn">
+                            <span class="hyicon hyicon-back"></span> <span class="hidden-xs">Back</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="y-navbar-center">
+                <div class="y-navbar-center-content">
+                    <h1>Quick Start Guide</h1>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <div class="y-toolbar">
+                    <div class="y-toolbar-cell">
+                    </div>
+                    <div class="y-toolbar-cell">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="panel panel-default">
+    <div class="panel-heading">
+    </div>
+    <div class="panel-body">
+        <h1>Set up your Tenant</h1>
+        <div class="panel-heading"><h1>Configure SAP Hybris Profile Tag</h1></div>
+        <span>Follow the instructions at <a href="https://devportal.yaas.io/solutions/saphybrisprofile/index.html#ProfileTag">Profile Tag</a> to instrument your website(s) so that visitor activity can be collected and aggregated by the <a href="https://devportal.yaas.io/solutions/saphybrisprofile/index.html#Overview">SAP Hybris Profile</a>.</span>
+        <div class="panel-heading"><h1>Configure Real-Time Reporting Service</h1>
+        </div>
+        <span>Create or edit an existing YaaS project and subscribe to both of the following packages: <br>
+	Profile Core Services (Beta) <br>
+	Profile Services for Commerce (Beta) <br>
+Follow the complete instructions at <link> to enable your big data to be collected / aggregated by the SAP Hybris Profile, and subsequently queried in real time via the Real-Time Reporting Service.
+</span>
+        <div class="panel-heading"><h1>Subscribe to the Profile Live Dashboard YaaS package</h1></div>
+        <span>Open the same YaaS project you created / configured in the previous step and add a subscription to the Profile Live Dashboard [BETA] v1 package</span>
+        <div class="panel-heading"><h1>Configure Client Callback</h1></div>
+        <span>Create or edit an existing OAuth2 Client on the same YaaS project you created / configured in a previous step and add the following callback for the Profile Live Dashboard: <br>
+	https://livedashboard-v1-prod.us-east.internal.yaas.io/callback/
+</span>
+        <div class="panel-heading"><h1>Configure Website Display Namek</h1></div>
+        <span>After you subscribe to the Profile Live Dashboard package, a Builder Module named ‘Live Dashboard Configuration’ will appear in the navigation menu to the left under your project.  Select that Builder Module and then open the Configuration tab, enter a display name of your choice for the brand / website which will be displayed in the Live Dashboard UI at runtime.</span>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h1>Launch the App</h1>
+        <div class="panel-heading"><h1>Find your tenant-specific URL</h1></div>
+        <span>In the Builder Module named ‘Live Dashboard Configuration’ which appears in the navigation menu to the left under your project, open the Application tab.  Find the name of the client from the previous step for which you configured the callback.  Click the Application URL to its right.  This is the tenant-specific URL which runs the Profile Live Dashboard for the website(s) you’ve tagged with SAP Hybris Profile Tag.  Once clicked you will be prompted for login to YaaS or you will be logged in automatically (via SAP Cloud Identity).</span>
+
+        <div class="panel-heading"><h1>Share your tenant-specific URL</h1></div>
+        <span>You may share that same tenant-specific application URL with any user to whom you have granted project member privileges for this same project.</span>
+    </div>
+
+</div><div class="panel panel-default">
+    <div class="panel-body">
+        <h1>Customize the App</h1>
+        <div class="panel-heading"><h1>Manage Referrers</h1></div>
+        <span>In the Builder Module named ‘Live Dashboard Configuration’ which appears in the navigation menu to the left under your project, open the Configuration tab and click the card which reads, “Add Referrers”.  Enter a brand-appropriate display name and the color of your choice for the popular referrers to your site.  Stars which represent a group of visitors from the same referrer will be shown in this color.</span>
+    </div>
+
+</div><div class="panel panel-default">
+    <div class="panel-body">
+        <h1>Integrate the App with SAP Systems</h1>
+        <div class="panel-heading"><h1>SAP Hybris Marketing Cloud and OnPrem 1708+</h1></div>
+        <span>A custom integration scenario named ‘Marketing – SAP Hybris Profile Live Dashboard Integration (SAP_COM_0097)‘ allows you to enter your tenant-specific URL for the Profile Live Dashboard application as the redirect action to be taken when the user clicks on a Fiori Tile from the SAP Hybris Marketing application (both Cloud and OnPrem) beginning with the 1708 release.  The Fiori Tile is located under ‘Contacts and Profiles’.</span>
+        <div class="panel-heading"><h1>SAP Hybris Customer Journey Manager 1708++</h1></div>
+        <span>An additional callback can be entered on your OAuth2 client enabling you to call the following endpoint from another YaaS application in the case you’d like that application to have a glimpse / preview of an abbreviated version of the Profile Live Dashboard’s Live Statistics Header.  For example, the SAP Hybris Customer Journey Manager app beginning with release 1708 has added an animated Fiori Tile to which it streams the output from the following “tile-specific” application URL:<br>
+a.	Tile-Specific Callback = <br>
+<a href="https://livedashboard-v1-prod.us-east.internal.yaas.io/callback_tile/">https://livedashboard-v1-prod.us-east.internal.yaas.io/callback_tile/</a>  <br><br>
+
+b.	Tile-Specific Application URL = <br>
+<a href="https://livedashboard-v1-prod.us-east.internal.yaas.io/login_tile/[your_unique_clientId]">https://livedashboard-v1-prod.us-east.internal.yaas.io/login_tile/[your_unique_clientId]</a> <br>
+</span>
+    </div>
+
+</div>
+</body>
+</html>
